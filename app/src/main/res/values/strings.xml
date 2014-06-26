@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyDeezer</string>
+    <string name="song_title_string">Titre</string>
+    <string name="artist_name_string">Artiste</string>
+    <string name="album_name_string">Album</string>
+    <string name="favorites_string">Favoris</string>
+    <string name="fav_yes_btn_string">Oui</string>
+    <string name="fav_no_btn_string">Non</string>
+    <string name="go_to_btn_string">Aller à</string>
+    <string name="listen_btn_string">Ecouter</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_music_list">My Deezer</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

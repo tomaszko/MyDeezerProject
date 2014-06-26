@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="songTitle" type="id">songTitle</item>
+    <item name="artiste" type="id">linearArtiste</item>
+</resources>
