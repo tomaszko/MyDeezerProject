@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Music implements Serializable {
 
-    private String id;
+    private String identifier;
     private String title;
     private String artist;
     private String album;
@@ -14,12 +14,12 @@ public class Music implements Serializable {
     private String coverURL;
     private String link;
 
-    public String getId() {
-        return id;
+    public Music(String identifier) {
+        this.identifier = identifier;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getIdentifier() {
+        return identifier;
     }
 
     public String getTitle() {
@@ -93,7 +93,7 @@ public class Music implements Serializable {
 
     public static Music getDefaultMusic () {
 
-        Music m = new Music();
+        Music m = new Music("0");
         m.setTitle("Twist");
         m.setArtist("Korn");
         m.setAlbum("Life is Peachy");
