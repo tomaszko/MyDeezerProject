@@ -57,12 +57,14 @@
                     android:id="@+id/musicFavYesRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:saveEnabled="false"
                     android:textSize="25sp"
                     android:text="@string/fav_yes_btn_string"/>
                 <RadioButton
                     android:id="@+id/musicFavNoRadioBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:saveEnabled="false"
                     android:textSize="25sp"
                     android:text="@string/fav_no_btn_string"/>
             </RadioGroup>

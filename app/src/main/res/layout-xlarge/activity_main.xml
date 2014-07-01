@@ -1,0 +1,21 @@
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="40"
+        android:name="thomascorfield.fr.mydeezer.fragments.MusicListFragment"
+        android:id="@+id/musicListFragment"
+        />
+
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="60"
+        android:name="thomascorfield.fr.mydeezer.fragments.MusicFragment"
+        android:id="@+id/musicFragment" />
+</LinearLayout>

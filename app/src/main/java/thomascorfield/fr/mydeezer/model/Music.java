@@ -1,10 +1,10 @@
-package thomascorfield.fr.mydeezer;
+package thomascorfield.fr.mydeezer.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Music implements Serializable {
 
+    private String id;
     private String title;
     private String artist;
     private String album;
@@ -13,6 +13,14 @@ public class Music implements Serializable {
     private String sampleURL;
     private String coverURL;
     private String link;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;
@@ -96,27 +104,5 @@ public class Music implements Serializable {
         m.setCoverURL(null);
 
         return m;
-    }
-
-    public static ArrayList<Music> getAllMusics (int size) {
-
-        ArrayList<Music> list = new ArrayList<Music>();
-
-        for (int i = 0; i < size; i++) {
-
-            Music m = new Music();
-            m.setTitle("Track" + (i + 1));
-            m.setArtist("Artist");
-            m.setAlbum("Album");
-            m.setFavorite(i % 2 == 0);
-            m.setDuration(145);
-            m.setSampleURL(null);
-            m.setLink("http://www.deezer.com");
-            m.setCoverURL(null);
-
-            list.add(m);
-        }
-
-        return list;
     }
 }
