@@ -15,6 +15,8 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.net.URI;
 
+import thomascorfield.fr.mydeezer.MainActivity;
+import thomascorfield.fr.mydeezer.model.DatabaseManager;
 import thomascorfield.fr.mydeezer.model.Music;
 import thomascorfield.fr.mydeezer.R;
 
@@ -33,6 +35,8 @@ public class MusicFragment extends Fragment {
 
     private Music music;
 
+    private DatabaseManager dbmgr;
+
     private MediaPlayer player = new MediaPlayer();
 
     public static final String MUSIC_SELECTED = "musicactivity.musicselected";
@@ -42,6 +46,8 @@ public class MusicFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_music, null);
+
+        this.dbmgr = ((MainActivity) getActivity()).getDatabaseManager();
 
         this.musicSongTitle = (TextView) v.findViewById(R.id.musicSongTitle);
         this.musicArtistTextView = (TextView) v.findViewById(R.id.musicArtistTextView);
@@ -58,14 +64,6 @@ public class MusicFragment extends Fragment {
             this.music = Music.getDefaultMusic();
 
         }
-
-        /*this.musicSongTitle.setText(this.music.getTitle());
-
-        this.musicArtistTextView.setText(this.music.getArtist());
-        this.musicAlbumTextView.setText( this.music.getAlbum());
-
-        this.musicFavYesRadioBtn.setChecked(this.music.isFavorite());
-        this.musicFavNoRadioBtn.setChecked(!this.music.isFavorite());*/
 
         refresh();
 
@@ -89,7 +87,7 @@ public class MusicFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                music.setFavorite(false);
+                dbmgr.remove(music);
             }
         });
 
@@ -97,7 +95,7 @@ public class MusicFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                music.setFavorite(true);
+                dbmgr.add(music);
             }
         });
 

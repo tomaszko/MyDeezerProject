@@ -14,7 +14,7 @@ public class DummyMusicFetcher implements MusicFetcher {
 
         for (int i = 0; i < 30; i++) {
 
-            Music m = new Music();
+            Music m = new Music("0");
             m.setTitle("Track" + (i + 1));
             m.setArtist("Artist");
             m.setAlbum("Album");

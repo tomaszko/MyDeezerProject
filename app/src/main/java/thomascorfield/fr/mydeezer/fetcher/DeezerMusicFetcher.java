@@ -40,7 +40,7 @@ public class DeezerMusicFetcher implements MusicFetcher {
                     for (int i = 0; i < data.length(); i++) {
 
                         JSONObject item = data.getJSONObject(i);
-                        Music m = new Music();
+                        Music m = new Music("0");
                         m.setTitle(item.getString("title"));
                         m.setArtist(item.getJSONObject("artist").getString("name"));
                         m.setAlbum(item.getJSONObject("album").getString("title"));
